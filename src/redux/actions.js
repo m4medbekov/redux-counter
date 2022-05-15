@@ -1,4 +1,4 @@
-import { ASYNC_INCREMENT, DECREMENT, INCREMENT } from "./types";
+import {DECREMENT, INCREMENT } from "./types";
 
 export function increment() {
     return {
@@ -15,7 +15,7 @@ export function decrement() {
 export function async_increment() {
     return function(dispatch) {
         setTimeout(() => {
-            dispatch({type: ASYNC_INCREMENT})
+            dispatch(increment())
         }, 2000)
     } 
 }
